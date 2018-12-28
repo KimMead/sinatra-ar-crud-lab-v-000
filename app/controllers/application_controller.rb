@@ -1,4 +1,4 @@
-
+require 'pry'
 require_relative '../../config/environment'
 
 class ApplicationController < Sinatra::Base
@@ -34,7 +34,7 @@ class ApplicationController < Sinatra::Base
     @article = Article.find(params[:id])
     erb :edit
   end
-
+pry 
   patch '/articles/:id' do
     article = Article.find(params[:id])
     article.update(name: params[:name], content: params[:content])
