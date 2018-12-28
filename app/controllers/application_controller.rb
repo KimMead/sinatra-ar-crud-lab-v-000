@@ -38,7 +38,7 @@ pry
   patch '/articles/:id' do
     article = Article.find(params[:id])
     article.update(name: params[:name], content: params[:content])
-    redirect ("/articles/#{Article.last.id}")
+    redirect ("/articles/#{@article.id}")
   end
 
   delete '/articles/:id/delete' do
